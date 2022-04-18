@@ -2,13 +2,14 @@
 
 :root{
     --green-principal: #47cfac;
+    --gray: hsl(214deg 16% 92%);
     --white: #FFFFFF;
     --black: #000000;
 
     --media:1.6rem;
 }
 *,*::before,*::after{
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 html{
     font-size: 62.5%;
@@ -18,6 +19,11 @@ body{
     padding: 0;
     font-family: 'Roboto mono', monospace;
     font-size: var(--media);
+}
+.container{
+    max-width: 980px;
+    min-width: 300px;
+    margin: 0 auto;
 }
 img{
     width: 100%;
@@ -117,4 +123,93 @@ h1{
     font-weight: 700;
     color: var(--black);
     background-color: var(--green-principal);
+}
+
+/***BLOGS***/
+.blogs-main{
+    
+}
+
+.blogs-news-container{
+    background-color: var(--gray);
+}
+.blogs-main-new{
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 30px;
+}
+.blogs-main-new h3{
+    grid-area: 1/1/2/2;    
+}
+.blogs-news-img-container{
+    grid-area: 2/1/3/2;
+}
+.blogs-news-img-container img{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.blogs-news-info-container{
+    grid-area: 2/2/3/3;
+}
+.blogs-news-info-container h2{
+    margin: 0;
+}
+.blogs-news-info-container p{
+    text-align: justify;
+}
+.blogs-button{
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 2px solid var(--green-principal);
+    color: var(--black);
+    font-weight: 700;
+}
+
+.blogs-posts{
+    padding: 0 25px;
+}
+.blogs-posts h2{
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--gray);
+}
+.blogs-posts-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.post-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.post-container img{
+    height: 180px;
+}
+.post-container h3{
+    margin: 10px 0;
+}
+.post-container p{
+    margin: 0 0 20px 0;
+    text-align: justify;
+}
+.post-container a{
+    align-self: flex-start;
+}
+
+
+/**FOOTER**/
+.footer{
+    border-top: 30px solid var(--green-principal);
+}
+.footer p{
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
 }
