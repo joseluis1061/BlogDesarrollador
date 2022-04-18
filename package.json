@@ -1,0 +1,16 @@
+{
+  "name": "maquetacion-en-css",
+  "version": "1.0.0",
+  "description": "Diseño web css",
+  "main": "scs/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Css",
+    "html",
+    "js"
+  ],
+  "author": "JOSE LUIS ZUÑIGA <joseluis836@hotmail.com>",
+  "license": "MIT"
+}
