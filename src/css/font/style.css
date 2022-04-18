@@ -218,6 +218,7 @@ h1{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 20px;
 }
 .blog-image-container{
     width: 100%;
@@ -230,24 +231,36 @@ h1{
     padding-bottom: 20px;
     border-bottom: 1px solid var(--gray);
 }
+.blog-main-new h2{
+    font-size: 3.3rem;
+}
 .blog-main-new p{
     text-align: justify;
 }
 
+
+/*****CONTACTO******/
 .blog-contacto{
     background-color: var(--gray);
+    max-height: 400px;
+    padding: 50px 25px;
 }
 .blog-contacto-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-content: center;
-    max-height: 400px;
-    padding: 50px;
 }
 .contacto{
+    width: auto;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 25px;
+}
+.contacto-left{
+    justify-self: left;
+}
+.contacto-right{
+    justify-self: end;
+    
 }
 .contacto img{
     width: 100px;
@@ -263,6 +276,64 @@ h1{
     color: var(--black);
 }
 .contacto-info p{
+    display: block;
     margin: 0;
     max-width: 200px;
+    width: auto;
+}
+
+/***PERFIL****/
+.main-perfil{
+    width: 100%;
+}
+.main-perfil-container{
+    background-color: var(--gray);
+    padding: 20px 30px;    
+}
+.main-perfil-presentacion{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-content: center;
+    gap: 30px;
+}
+/* .main-perfil-presentacion img{
+    width: 100%;
+} */
+.main-perfil-informacion h3{
+    margin: 0;
+}
+.main-perfil-informacion p{
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.main-proyects{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.main-proyects h2{
+    text-align: center;
+    margin: 25px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+.main-proyects-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+.main-proyect{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.main-proyect h3{
+    margin: 0;
+    margin-bottom: 10px;
+
+}
+.main-proyect p{
+    margin: 0;
+    text-align: justify;
 }
