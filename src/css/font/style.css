@@ -137,19 +137,23 @@ h1{
 }
 
 /***BLOGS***/
-.blogs-main{
+/* .blogs-main{
     
-}
+} */
 
 .blogs-news-container{
     background-color: var(--gray);
 }
 .blogs-main-new{
     padding: 0 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    column-gap: 30px;
+}
+@media(min-width: 768px){
+    .blogs-main-new{            
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        column-gap: 30px;
+    }
 }
 .blogs-main-new h3{
     grid-area: 1/1/2/2;    
@@ -161,6 +165,12 @@ h1{
     display: flex;
     flex-direction: column;
     align-content: center;
+}
+@media(min-width: 768px){
+    .blogs-news-img-container img{
+        height: 100%;
+        padding-bottom: 25px;
+    }
 }
 .blogs-news-info-container{
     grid-area: 2/2/3/3;
@@ -188,11 +198,23 @@ h1{
     padding: 15px;
     border-bottom: 1px solid var(--gray);
 }
-.blogs-posts-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+
+@media(min-width: 550px){
+    .blogs-posts-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
 }
+@media(min-width: 768px){
+    .blogs-posts-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+
 .post-container{
     display: flex;
     flex-direction: column;
@@ -242,12 +264,15 @@ h1{
 /*****CONTACTO******/
 .blog-contacto{
     background-color: var(--gray);
-    max-height: 400px;
+    max-height: 450px;
     padding: 50px 25px;
 }
 .blog-contacto-container{
+    
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 25px;
+    justify-content: center;
 }
 .contacto{
     width: auto;
@@ -255,18 +280,36 @@ h1{
     grid-template-columns: auto 1fr;
     gap: 25px;
 }
-.contacto-left{
-    justify-self: left;
+@media(min-width: 550px){
+    .blog-contacto-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 25px;
+    }
+    .contacto{
+        width: auto;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 25px;
+    }
+    .contacto-left{
+        justify-self: left;
+    }
+    .contacto-right{
+        justify-self: end;
+        
+    }
 }
-.contacto-right{
-    justify-self: end;
-    
-}
+
+
 .contacto img{
     width: 100px;
 }
 .contacto-info{
     margin: 0;
+    width: auto;
+    max-width: 200px;
 }
 .contacto-info a{    
     display: inline-block;
@@ -290,15 +333,18 @@ h1{
     background-color: var(--gray);
     padding: 20px 30px;    
 }
-.main-perfil-presentacion{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-content: center;
-    gap: 30px;
+
+@media(min-width: 750px){
+    .main-perfil-presentacion{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-content: center;
+        gap: 30px;
+    }
 }
-/* .main-perfil-presentacion img{
-    width: 100%;
-} */
+.main-perfil-presentacion img{
+    height: 100%;
+}
 .main-perfil-informacion h3{
     margin: 0;
 }
@@ -307,26 +353,51 @@ h1{
     text-align: justify;
 }
 
-.main-proyects{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
-}
 .main-proyects h2{
     text-align: center;
     margin: 25px 0;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--gray);
 }
+
+.article-proyect{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 10px 10px;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.article-proyect h3{
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+.article-proyect p{
+    margin: 10px 0;
+    text-align: justify;
+}
+
 .main-proyects-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
+    padding: 0px 25px;
+}
+@media(min-width: 550px){
+    .main-proyects-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+}
+@media(min-width: 768px){
+    .main-proyects-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 .main-proyect{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    
 }
 .main-proyect h3{
     margin: 0;
